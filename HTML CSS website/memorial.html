@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memorial Page</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+    <header class="bg-blue-600 text-white py-4">
+        <h1 class="text-3xl font-bold text-center">In Loving Memory</h1>
+    </header>
+
+    <main class="container mx-auto mt-8 px-4">
+        <!-- Tribute for Marcie -->
+        <section class="bg-white shadow-md rounded-lg p-4 mb-6">
+            <h2 class="text-2xl font-semibold text-blue-600">Marcie</h2>
+            <div class="relative mt-4">
+                <!-- Slideshow Container -->
+                <div id="marcie-slideshow" class="slide-container">
+                    <img src="images/marcie-memorial1.jpg" alt="Marcie - Slide 1" class="slide active">
+                    <img src="images/marcie-memorial2.jpg" alt="Marcie - Slide 2" class="slide">
+                    <img src="images/marcie-memorial3.jpg" alt="Marcie - Slide 3" class="slide">
+                    <img src="images/marcie-memorial4.jpg" alt="Marcie - Slide 4" class="slide">
+                </div>
+                <!-- Navigation Buttons -->
+                <div class="absolute top-1/2 left-2 transform -translate-y-1/2">
+                    <button onclick="prevSlide('marcie-slideshow')" class="bg-blue-500 text-white px-2 py-1 rounded">&lt;</button>
+                </div>
+                <div class="absolute top-1/2 right-2 transform -translate-y-1/2">
+                    <button onclick="nextSlide('marcie-slideshow')" class="bg-blue-500 text-white px-2 py-1 rounded">&gt;</button>
+                </div>
+            </div>            
+            <p class="mt-4 text-gray-700">
+                Marcie was my princess, my baby girl who I cherished above all else.
+                She was often my rock through a lot of challenging times in my life, always chirping and yapping away about something.
+                Never a quiet moment with Marcie around, or as we affectionately called her Marce-hole, as she was constantly up to no good and letting the whole neighbourhood hear about it.
+                I've never met a more vocal cat than her.
+                But in the end, it was someone else's selfish idiocy that ripped her away from me.
+                Our house is along a popular dog walking path, and this lady had her mastiff off leash.
+                This so called "absolute sweetheart" ran into our back garden and ripped Marcie out of the plastic box which housed her outdoor bed.
+                Dan couldn't pry it off and sustained severe injuries himself, but eventually it relented.
+                She succumbed to her injuries, and they were so severe my mum had her wrapped in a blanket and begged me not to look under it - only at her face.
+                She died just as noisy however:
+                "Even under a sedative she didn't stop chatting away, she kept making them giggle." - Mum.
+            </p>
+            <!-- Button -->
+            <div class="text-center mt-6">
+                <a href="https://www.legislation.gov.uk/ukpga/1991/65/contents" 
+                   target="_blank" 
+                   class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition duration-200">
+                    Learn about Dangerous Dog Laws
+                </a>
+            </div>            
+        </section>
+
+        <!-- Tribute for The Boy -->
+        <section class="bg-white shadow-md rounded-lg p-4">
+            <h2 class="text-2xl font-semibold text-blue-600">The Boy</h2>
+            <div class="relative mt-4">
+                <!-- Slideshow Container -->
+                <div id="boy-slideshow" class="slide-container">
+                    <img src="images/boy-memorial1.jpg" alt="The Boy - Slide 1" class="slide active">
+                    <img src="images/boy-memorial2.jpg" alt="The Boy - Slide 2" class="slide">
+                    <img src="images/boy-memorial3.jpg" alt="The Boy - Slide 3" class="slide">
+                    <img src="images/boy-memorial4.jpg" alt="The Boy - Slide 4" class="slide">
+                </div>
+                <!-- Navigation Buttons -->
+                <div class="absolute top-1/2 left-2 transform -translate-y-1/2">
+                    <button onclick="prevSlide('boy-slideshow')" class="bg-blue-500 text-white px-2 py-1 rounded">&lt;</button>
+                </div>
+                <div class="absolute top-1/2 right-2 transform -translate-y-1/2">
+                    <button onclick="nextSlide('boy-slideshow')" class="bg-blue-500 text-white px-2 py-1 rounded">&gt;</button>
+                </div>
+            </div>            
+            <p class="mt-4 text-gray-700">
+                "We adopted the boy when I was 12 or thereabouts, and he 3 or thereabouts.
+                It was an adjustment; he spent much time hiding in my room, only nipping out for a bit of food or to meow at a closed door.
+                But he did adjust! For one, fought his way towards running the neighbourhood territories.
+                He was (and is) my best friend. He had this way of knowing when things got rough for me, always stubbornly sticking by me and headbutting me into feeling a little better.
+                I know he was tired, and he couldn't move as fast as he used to - he looked ready to leave and then he did.
+                I knew that. But I couldn't be there to see him off. I'm sorry, Errol. 
+                I hope you've found someplace warm to nap, maybe a bit of company - you were too socialable, stealing the room every time someone came over.  
+                It's been a couple of months: I'm doing better, but I ain't been the same since you left.
+                I miss you." - John, my boyfriend and loving owner of The Boy
+            </p>
+        </section>
+    </main>
+
+    <footer class="text-center py-4 mt-8 text-gray-600">
+        <div class="text-center mt-6">
+            <a href="index.html" 
+               class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition duration-200">
+                Return to Homepage
+            </a>
+        </div>
+    </footer>    
+
+    <style>
+        .slide-container {
+            position: relative;
+            width: 600px; 
+            height: 300px; 
+            margin: 0 auto; 
+            overflow: hidden;
+        }
+        .slide {
+            position: absolute;
+            top: 50%; 
+            left: 50%;
+            transform: translate(-50%, -50%); 
+            max-width: 100%;
+            max-height: 100%; 
+            opacity: 0; 
+            transition: opacity 1s ease-in-out;
+        }
+        .slide.active {
+            opacity: 1; 
+        }
+    </style>               
+
+    <script>
+        // Function to cycle slides
+        function nextSlide(slideshowId) {
+            const slideshow = document.getElementById(slideshowId);
+            const slides = slideshow.querySelectorAll(".slide");
+            let currentIndex = Array.from(slides).findIndex(slide => slide.classList.contains("active"));
+            slides[currentIndex].classList.remove("active");
+            const nextIndex = (currentIndex + 1) % slides.length;
+            slides[nextIndex].classList.add("active");
+        }
+
+        // Function to start auto slideshow
+        function startAutoSlideshow(slideshowId, interval = 3000) {
+            setInterval(() => {
+                nextSlide(slideshowId);
+            }, interval);
+        }
+
+        // Initialize slideshows
+        document.addEventListener("DOMContentLoaded", () => {
+            startAutoSlideshow("marcie-slideshow");
+            startAutoSlideshow("boy-slideshow");
+        });
+    </script>
+</body>
+</html>
