@@ -1,0 +1,107 @@
+/* Image box */
+.slide-container {
+    position: relative;
+    width: 600px; 
+    height: 300px; 
+    margin: 0 auto; 
+    overflow: hidden;
+}
+
+/* Slideshow animations */
+.slide {
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    max-width: 100%;
+    max-height: 100%; 
+    opacity: 0; 
+    transition: opacity 1s ease-in-out;
+}
+.slide.active {
+    opacity: 1; 
+}
+.hidden {
+    display: none;
+}
+.show {
+    display: block;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Index Page Navigation Arrows */
+.nav-button {
+    background-color: #f9a8d4; /* Pink-400 for index arrows */
+    color: white;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.75rem;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+.nav-button:hover {
+    background-color: #f472b6; /* Pink-500 for hover effect */
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Memorial Page Navigation Arrows */
+.nav-button-memorial {
+    background-color: #fb923c; /* Orange-400 for memorial arrows */
+    color: white;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.75rem;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+.nav-button-memorial:hover {
+    background-color: #f97316; /* Orange-500 for hover effect */
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Specific positions for left and right buttons */
+.nav-button.left {
+    left: 0.5rem; 
+}
+.nav-button.right {
+    right: 0.5rem; 
+}
+
+/* Default Paw Print (for all pages) */
+.paw-print {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+    background-color: transparent;
+    pointer-events: none;
+    animation: fadeOut 2s forwards;
+}
+
+/* Home Page Paw Prints */
+.paw-print.home {
+    background-image: url('images/pink-paw.png');
+}
+
+/* Memorial Page Paw Prints */
+.paw-print.memorial {
+    opacity: 0.8;
+    background-image: url('images/white-paw.png');
+    filter: drop-shadow(0 0 30px rgba(240, 123, 27, 0.3)); /* Applies an outer glow */
+}
+  
+/* Fading animation */
+@keyframes fadeOut {
+    to {
+      opacity: 0;
+      transform: scale(0.5);
+    }
+}
+
+/* Brown colour */
+.bio-text {
+    color: #a15c32;
+}

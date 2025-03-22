@@ -4,18 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Memorial Page</title>
-    <!-- Tailwind CSS CDN -->
+    <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="scripts/memorial.js" defer></script>
+    <script src="scripts/pawprints.js"></script>
 </head>
-<body class="bg-gray-100 text-gray-800">
-    <header class="bg-blue-600 text-white py-4">
+<body class="bg-orange-100 text-gray-800">
+    <header class="bg-orange-400 text-white py-4">
         <h1 class="text-3xl font-bold text-center">In Loving Memory</h1>
     </header>
 
     <main class="container mx-auto mt-8 px-4">
         <!-- Tribute for Marcie -->
         <section class="bg-white shadow-md rounded-lg p-4 mb-6">
-            <h2 class="text-2xl font-semibold text-blue-600">Marcie</h2>
+            <h2 class="text-2xl font-semibold text-orange-500">Marcie</h2>
             <div class="relative mt-4">
                 <!-- Slideshow Container -->
                 <div id="marcie-slideshow" class="slide-container">
@@ -26,13 +28,13 @@
                 </div>
                 <!-- Navigation Buttons -->
                 <div class="absolute top-1/2 left-2 transform -translate-y-1/2">
-                    <button onclick="prevSlide('marcie-slideshow')" class="bg-blue-500 text-white px-2 py-1 rounded">&lt;</button>
+                    <button onclick="prevSlide('marcie-slideshow')" class="nav-button-memorial left">&lt;</button>
                 </div>
                 <div class="absolute top-1/2 right-2 transform -translate-y-1/2">
-                    <button onclick="nextSlide('marcie-slideshow')" class="bg-blue-500 text-white px-2 py-1 rounded">&gt;</button>
+                    <button onclick="nextSlide('marcie-slideshow')" class="nav-button-memorial right">&gt;</button>
                 </div>
             </div>            
-            <p class="mt-4 text-gray-700">
+            <p class="bio-text">
                 Marcie was my princess, my baby girl who I cherished above all else.
                 She was often my rock through a lot of challenging times in my life, always chirping and yapping away about something.
                 Never a quiet moment with Marcie around, or as we affectionately called her Marce-hole, as she was constantly up to no good and letting the whole neighbourhood hear about it.
@@ -45,11 +47,11 @@
                 She died just as noisy however:
                 "Even under a sedative she didn't stop chatting away, she kept making them giggle." - Mum.
             </p>
-            <!-- Button -->
+            <!-- External Link Button -->
             <div class="text-center mt-6">
                 <a href="https://www.legislation.gov.uk/ukpga/1991/65/contents" 
                    target="_blank" 
-                   class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition duration-200">
+                   class="bg-orange-400 text-white py-2 px-4 rounded hover:bg-blue-600 transition duration-200">
                     Learn about Dangerous Dog Laws
                 </a>
             </div>            
@@ -57,7 +59,7 @@
 
         <!-- Tribute for The Boy -->
         <section class="bg-white shadow-md rounded-lg p-4">
-            <h2 class="text-2xl font-semibold text-blue-600">The Boy</h2>
+            <h2 class="text-2xl font-semibold text-orange-500">The Boy</h2>
             <div class="relative mt-4">
                 <!-- Slideshow Container -->
                 <div id="boy-slideshow" class="slide-container">
@@ -68,13 +70,13 @@
                 </div>
                 <!-- Navigation Buttons -->
                 <div class="absolute top-1/2 left-2 transform -translate-y-1/2">
-                    <button onclick="prevSlide('boy-slideshow')" class="bg-blue-500 text-white px-2 py-1 rounded">&lt;</button>
+                    <button onclick="prevSlide('boy-slideshow')" class="nav-button-memorial left">&lt;</button>
                 </div>
                 <div class="absolute top-1/2 right-2 transform -translate-y-1/2">
-                    <button onclick="nextSlide('boy-slideshow')" class="bg-blue-500 text-white px-2 py-1 rounded">&gt;</button>
+                    <button onclick="nextSlide('boy-slideshow')" class="nav-button-memorial right">&gt;</button>
                 </div>
             </div>            
-            <p class="mt-4 text-gray-700">
+            <p class="bio-text">
                 "We adopted the boy when I was 12 or thereabouts, and he 3 or thereabouts.
                 It was an adjustment; he spent much time hiding in my room, only nipping out for a bit of food or to meow at a closed door.
                 But he did adjust! For one, fought his way towards running the neighbourhood territories.
@@ -91,58 +93,10 @@
     <footer class="text-center py-4 mt-8 text-gray-600">
         <div class="text-center mt-6">
             <a href="index.html" 
-               class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition duration-200">
-                Return to Homepage
+               class="bg-orange-400 text-white py-2 px-4 rounded hover:bg-blue-600 transition duration-200">
+                Back to Home
             </a>
         </div>
-    </footer>    
-
-    <style>
-        .slide-container {
-            position: relative;
-            width: 600px; 
-            height: 300px; 
-            margin: 0 auto; 
-            overflow: hidden;
-        }
-        .slide {
-            position: absolute;
-            top: 50%; 
-            left: 50%;
-            transform: translate(-50%, -50%); 
-            max-width: 100%;
-            max-height: 100%; 
-            opacity: 0; 
-            transition: opacity 1s ease-in-out;
-        }
-        .slide.active {
-            opacity: 1; 
-        }
-    </style>               
-
-    <script>
-        // Function to cycle slides
-        function nextSlide(slideshowId) {
-            const slideshow = document.getElementById(slideshowId);
-            const slides = slideshow.querySelectorAll(".slide");
-            let currentIndex = Array.from(slides).findIndex(slide => slide.classList.contains("active"));
-            slides[currentIndex].classList.remove("active");
-            const nextIndex = (currentIndex + 1) % slides.length;
-            slides[nextIndex].classList.add("active");
-        }
-
-        // Function to start auto slideshow
-        function startAutoSlideshow(slideshowId, interval = 3000) {
-            setInterval(() => {
-                nextSlide(slideshowId);
-            }, interval);
-        }
-
-        // Initialize slideshows
-        document.addEventListener("DOMContentLoaded", () => {
-            startAutoSlideshow("marcie-slideshow");
-            startAutoSlideshow("boy-slideshow");
-        });
-    </script>
+    </footer>                  
 </body>
 </html>

@@ -4,11 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Cats</title>
-    <!-- Tailwind CSS CDN -->
+    <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="scripts/index.js" defer></script>
+    <script src="scripts/pawprints.js"></script>
 </head>
-<body class="bg-gray-100 text-gray-800">
-    <header class="bg-blue-600 text-white py-4">
+
+<body class="bg-pink-100 text-gray-800">
+    <header class="bg-purple-400 text-white py-4">
         <h1 class="text-3xl font-bold text-center">Meet My Cats</h1>
     </header>
 
@@ -19,32 +22,28 @@
                 <div class="relative">
                     <!-- Slideshow Container -->
                     <div id="diggle-slideshow" class="slide-container">
-                        <!-- Slide 1 -->
                         <img src="images/diggle-photo1.jpg" alt="Diggle - Slide 1" class="slide active">
-                        <!-- Slide 2 -->
                         <img src="images/diggle-photo2.jpg" alt="Diggle - Slide 2" class="slide">
-                        <!-- Slide 3 -->
                         <img src="images/diggle-photo3.jpg" alt="Diggle - Slide 3" class="slide">
-                        <!-- Slide 4 -->
                         <img src="images/diggle-photo4.jpg" alt="Diggle - Slide 4" class="slide">
                     </div>
                     <!-- Navigation Buttons -->
                     <div class="absolute top-1/2 left-2 transform -translate-y-1/2">
-                        <button onclick="prevSlide('diggle-slideshow')" class="bg-blue-500 text-white px-2 py-1 rounded">&lt;</button>
+                        <button onclick="prevSlide('diggle-slideshow')" class="nav-button left">&lt;</button>
                     </div>
                     <div class="absolute top-1/2 right-2 transform -translate-y-1/2">
-                        <button onclick="nextSlide('diggle-slideshow')" class="bg-blue-500 text-white px-2 py-1 rounded">&gt;</button>
+                        <button onclick="nextSlide('diggle-slideshow')" class="nav-button right">&gt;</button>
                     </div>
                 </div>
                 <div class="p-4">
-                    <h2 class="text-xl font-semibold text-blue-600">Diggle</h2>
-                    <p class="text-gray-700">This old man has seen my mum through 2 divorces!</p>
+                    <h2 class="text-xl font-semibold text-pink-600">Diggle</h2>
+                    <p class="text-purple-500">This old man has seen my mum through 2 divorces!</p>
                     <button 
                         onclick="toggleDropdown('diggle-more-info')" 
-                        class="mt-2 text-blue-500 hover:underline focus:outline-none">
+                        class="mt-2 text-pink-600 hover:underline focus:outline-none">
                         More
                     </button>
-                    <div id="diggle-more-info" class="hidden mt-2 text-gray-700">
+                    <div id="diggle-more-info" class="hidden mt-2 text-purple-500">
                         <p>
                            As of writing this (2025), the old man is pushing 17 and is still the king of the jungle (or the backyard and local field).
                            He spends most of his time sleeping and sunbathing, often getting dehydrated due to his black coat causing overheatig and yet having no intention of getting up to do something about it.
@@ -62,32 +61,28 @@
                 <div class="relative">
                     <!-- Slideshow Container -->
                     <div id="snowy-slideshow" class="slide-container">
-                        <!-- Slide 1 -->
                         <img src="images/snowy-photo1.jpg" alt="Snowy - Slide 1" class="slide active">
-                        <!-- Slide 2 -->
                         <img src="images/snowy-photo2.jpg" alt="Snowy - Slide 2" class="slide">
-                        <!-- Slide 3 -->
                         <img src="images/snowy-photo3.jpg" alt="Snowy - Slide 3" class="slide">
-                        <!-- Slide 4 -->
                         <img src="images/snowy-photo4.jpg" alt="Snowy - Slide 4" class="slide">
                     </div>
                     <!-- Navigation Buttons -->
                     <div class="absolute top-1/2 left-2 transform -translate-y-1/2">
-                        <button onclick="prevSlide('snowy-slideshow')" class="bg-blue-500 text-white px-2 py-1 rounded">&lt;</button>
+                        <button onclick="prevSlide('snowy-slideshow')" class="nav-button left">&lt;</button>
                     </div>
                     <div class="absolute top-1/2 right-2 transform -translate-y-1/2">
-                        <button onclick="nextSlide('snowy-slideshow')" class="bg-blue-500 text-white px-2 py-1 rounded">&gt;</button>
+                        <button onclick="nextSlide('snowy-slideshow')" class="nav-button right">&gt;</button>
                     </div>
                 </div>
                 <div class="p-4">
-                    <h2 class="text-xl font-semibold text-blue-600">Snowy</h2>
-                    <p class="text-gray-700">The Great Beast. The White Devourer. The Fluff Spreader. Racing world champ.</p>
+                    <h2 class="text-xl font-semibold text-pink-600">Snowy</h2>
+                    <p class="text-purple-500">The Great Beast. The White Devourer. The Fluff Spreader. Racing world champ.</p>
                     <button 
                         onclick="toggleDropdown('snowy-more-info')" 
-                        class="mt-2 text-blue-500 hover:underline focus:outline-none">
+                        class="mt-2 text-pink-600 hover:underline focus:outline-none">
                         More
                     </button>
-                    <div id="snowy-more-info" class="hidden mt-2 text-gray-700">
+                    <div id="snowy-more-info" class="hidden mt-2 text-purple-500">
                         <p>
                             Snowy is large and in charge, 10 years old, often forgetting his size and attempting stunts only achievable by more physically superior cats; he is the reason there is a permanent dent in the back of the couch, and why the scratching post collapsed.
                             He is supposed to be a white cat but is often dirty and matted, notably with a black line down his back from under the car where he crawls - lovingly referred to as his racing stripe.
@@ -104,32 +99,28 @@
                 <div class="relative">
                     <!-- Slideshow Container -->
                     <div id="anzio-slideshow" class="slide-container">
-                        <!-- Slide 1 -->
                         <img src="images/anzio-photo1.jpg" alt="Anzio - Slide 1" class="slide active">
-                        <!-- Slide 2 -->
                         <img src="images/anzio-photo2.jpg" alt="Anzio - Slide 2" class="slide">
-                        <!-- Slide 3 -->
                         <img src="images/anzio-photo3.jpg" alt="Anzio - Slide 3" class="slide">
-                        <!-- Slide 4 -->
                         <img src="images/anzio-photo4.jpg" alt="Anzio - Slide 4" class="slide">
                     </div>
                     <!-- Navigation Buttons -->
                     <div class="absolute top-1/2 left-2 transform -translate-y-1/2">
-                        <button onclick="prevSlide('anzio-slideshow')" class="bg-blue-500 text-white px-2 py-1 rounded">&lt;</button>
+                        <button onclick="prevSlide('anzio-slideshow')" class="nav-button left">&lt;</button>
                     </div>
                     <div class="absolute top-1/2 right-2 transform -translate-y-1/2">
-                        <button onclick="nextSlide('anzio-slideshow')" class="bg-blue-500 text-white px-2 py-1 rounded">&gt;</button>
+                        <button onclick="nextSlide('anzio-slideshow')" class="nav-button right">&gt;</button>
                     </div>
                 </div>
                 <div class="p-4">
-                    <h2 class="text-xl font-semibold text-blue-600">Anzio</h2>
-                    <p class="text-gray-700">Lord of the Fifth Circle (wrath) and self-appointed finger remover.</p>
+                    <h2 class="text-xl font-semibold text-pink-600">Anzio</h2>
+                    <p class="text-purple-500">Lord of the Fifth Circle (wrath) and self-appointed finger remover.</p>
                     <button 
                         onclick="toggleDropdown('anzio-more-info')" 
-                        class="mt-2 text-blue-500 hover:underline focus:outline-none">
+                        class="mt-2 text-pink-600 hover:underline focus:outline-none">
                         More
                     </button>
-                    <div id="anzio-more-info" class="hidden mt-2 text-gray-700">
+                    <div id="anzio-more-info" class="hidden mt-2 text-purple-500">
                         <p>
                             This little man was barely two weeks old when found in a wall nook next to a shop called Anzio's, go figure where his name came from.
                             Anzio is still mostly feral at the ripe age of 4, despite being hand reared by Dan since his discovery.
@@ -144,81 +135,15 @@
             </div>
             
         </section>
-    </main>
-
-    <style>
-        .slide-container {
-            position: relative;
-            width: 600px; 
-            height: 300px; 
-            margin: 0 auto; 
-            overflow: hidden;
-        }
-        .slide {
-            position: absolute;
-            top: 50%; 
-            left: 50%;
-            transform: translate(-50%, -50%); 
-            max-width: 100%;
-            max-height: 100%; 
-            opacity: 0; 
-            transition: opacity 1s ease-in-out;
-        }
-        .slide.active {
-            opacity: 1; 
-        }
-    </style>            
+    </main>            
 
     <footer class="text-center py-4 mt-8 text-gray-600">
         <div class="text-center mt-6">
             <a href="memorial.html" 
-               class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition duration-200">
+               class="bg-pink-400 text-white py-2 px-4 rounded hover:bg-pink-500 transition duration-200">
                 View Memorial Page
             </a>
         </div>
-    </footer>
-
-    <script>
-        // Function to go to the next slide with fade transition
-        function nextSlide(slideshowId) {
-            const slideshow = document.getElementById(slideshowId);
-            const slides = slideshow.querySelectorAll(".slide");
-            let currentIndex = Array.from(slides).findIndex(slide => slide.classList.contains("active"));
-            slides[currentIndex].classList.remove("active");
-            const nextIndex = (currentIndex + 1) % slides.length;
-            slides[nextIndex].classList.add("active");
-        }
-    
-        // Function to go to the previous slide
-        function prevSlide(slideshowId) {
-            const slideshow = document.getElementById(slideshowId);
-            const slides = slideshow.querySelectorAll(".slide");
-            let currentIndex = Array.from(slides).findIndex(slide => slide.classList.contains("active"));
-            slides[currentIndex].classList.remove("active");
-            const prevIndex = (currentIndex - 1 + slides.length) % slides.length;
-            slides[prevIndex].classList.add("active");
-        }
-    
-        // Function to set up an automatic slideshow with fade effect
-        function startAutoSlideshow(slideshowId, interval = 3000) {
-            setInterval(() => {
-                nextSlide(slideshowId);
-            }, interval);
-        }
-    
-        // Start automatic slideshows for all cats
-        document.addEventListener("DOMContentLoaded", () => {
-            startAutoSlideshow("diggle-slideshow");
-            startAutoSlideshow("snowy-slideshow");
-            startAutoSlideshow("anzio-slideshow");
-        });
-        
-        // Dropdown buttons
-        function toggleDropdown(elementId) {
-            const dropdown = document.getElementById(elementId);
-            dropdown.classList.toggle("hidden");
-        }
-
-    </script>          
+    </footer>        
 </body>
 </html>
